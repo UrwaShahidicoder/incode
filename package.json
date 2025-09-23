@@ -1,0 +1,32 @@
+{
+  "name": "software-house-website",
+  "version": "1.0.0",
+  "description": "A modern software house website built with React, TypeScript, and Node.js",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm install && npm run install-server && npm run install-client",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "nodejs",
+    "software-house",
+    "website"
+  ],
+  "author": "Software House Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.6"
+  }
+}
